@@ -5,11 +5,11 @@
  * Tanggal : 24 Februari 2024
  */
 
-public class PesananPembeli {   //mendeklarasikan class PesananPembeli
+public class PesananPembeli {   //mendeklarasikan class PesananPembeli untuk menampung data pembeli
     private String namaProduk;
     private int jumlahPesan;
 
-    public PesananPembeli(String namaProduk, int jumlahPesan) { //Constructors untuk objek Pesananpembeli
+    public PesananPembeli(String namaProduk, int jumlahPesan) { //Constructors untuk membuat objek Pesananpembeli
         this.namaProduk = namaProduk;   
         this.jumlahPesan = jumlahPesan;
     }
