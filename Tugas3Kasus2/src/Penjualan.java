@@ -7,9 +7,10 @@ import java.util.List;
  * Tanggal : 24 Februari 2024
  */
 
+ // Kelas Penjualan bertanggung jawab untuk mengelola penjualan produk di MiniMarket
 public class Penjualan {
-    private Produk[] nama_produk;
-    private int quantity;
+    private Produk[] nama_produk;   //Array untuk menyimpan produk yang akan dijual
+    private int quantity;   //Jumlah produk yang saat ini tersedia
     private int harga_total;
 
 
@@ -19,7 +20,7 @@ public class Penjualan {
     quantity = 0; //Set jumlah Produk awal menjadi 0
     }
 
-    //Metode untuk menambahkan produk ke dalam class MiniMarket
+    //Prosedur untuk menambahkan produk ke dalam class MiniMarket
     public void tambahProduk(Produk Produk) {
         //Cek apakah masih ada tempat kosong untuk menambahkan produk baru
         if (quantity < nama_produk.length) {
@@ -30,7 +31,7 @@ public class Penjualan {
         }
     }
 
-    //Procedure untuk menampilkan Produk makanan yang tersedia di MiniMarket
+    //Prosedur untuk menampilkan Produk makanan yang tersedia di MiniMarket
     public void tampilProdukList() {
         System.out.println("\n\tMenu Makanan ");
         System.out.println("========================================");
@@ -42,7 +43,7 @@ public class Penjualan {
         }
     }
 
-     // Metode untuk memesan Produk
+     //Prosedur untuk memesan Produk
     public void pesanProduk(String namaProduk, int jumlahPesan) {
         for (int i = 0; i < quantity; i++) {
             if (nama_produk[i].getNama_Produk().equalsIgnoreCase(namaProduk)) {
@@ -100,3 +101,4 @@ public class Penjualan {
         }
     }
 }
+
