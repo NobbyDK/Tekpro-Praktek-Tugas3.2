@@ -10,10 +10,10 @@ public class Produk {   //mendeklarasikan class Produk
     private int harga;
     private int qty;
 
-    public Produk (String nama_Produk, int harga, int qty){     //constructors untuk objek produk
-        this.nama_Produk = nama_Produk;
-        this.harga = harga;
-        this.qty = qty;
+    public Produk (String nama_Produk, int harga, int qty){     //constructors untuk membuat objek produk
+        this.nama_Produk = nama_Produk; //Nama produk
+        this.harga = harga; //Harga Produk
+        this.qty = qty; //Jumlah Stok Produk
     }
 
     public String getNama_Produk() {
@@ -28,11 +28,12 @@ public class Produk {   //mendeklarasikan class Produk
         return qty;
     }
 
-    public boolean isOutOfStock(){
+    public boolean isOutOfStock(){      //Fungsi untuk mengecek apakah stok produk habis
         return qty == 0;
     }
 
-    public void SisaQuantity(int jumlah){
+    public void SisaQuantity(int jumlah){       //Prosedur untuk mengurangi stok produk setelah pembelian
+
         qty -= jumlah;
     }
 }
