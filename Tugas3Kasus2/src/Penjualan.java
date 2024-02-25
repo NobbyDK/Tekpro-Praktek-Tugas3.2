@@ -31,10 +31,10 @@ public class Penjualan {
         }
     }
 
-    //Prosedur untuk menampilkan Produk makanan yang tersedia di MiniMarket
+    //Prosedur untuk menampilkan Produk yang tersedia di MiniMarket
     public void tampilProdukList() {
-        System.out.println("\n\tMenu Makanan ");
-        System.out.println("========================================");
+        System.out.println("\n\t   List Produk ");
+        System.out.println("=====================================");
         for (int i = 0; i < quantity; i++) {
             if (!nama_produk[i].isOutOfStock()) { //Kondisi untuk mengecek apakah stok masih tersedia atau sudah habis
                 //menampilkan nama Produk, Quantity, dan harga
@@ -75,14 +75,14 @@ public class Penjualan {
 
     //Fungsi untuk Mengakumulasikan total pembayaran produk yang dibeli oleh pembeli
     public int totalpembayaran(List<PesananPembeli> daftarPesanan) {
-        int total = 0;
+        harga_total = 0;
         for (PesananPembeli pesanan : daftarPesanan) {
             int hargaProduk = getHargaProduk(pesanan.getNamaProduk());
-            total += hargaProduk * pesanan.getJumlahPesan();
+            harga_total += hargaProduk * pesanan.getJumlahPesan();
         }
-        System.out.println("Total Pembayaran Keseluruhan : Rp " + total);
+        System.out.println("Total Pembayaran Keseluruhan : Rp " + harga_total);
         System.out.println("Terimakasih telah memesan dan selamat menikmati");
-        return total;
+        return harga_total;
     }
     
     //Prosedur untuk menampilkan rincian akumulasi produk yang dibeli oleh pembeli
